@@ -19,8 +19,19 @@
     <script>
         
         // add code here
-        
-        
+        addEventListener("change", function(){addItem()});
+
+        function addItem()
+        {
+            const newItemVal = document.getElementById("select_item").value;
+            const ulElem = document.getElementById("shopList");
+            const liElem = document.createElement("li");
+            liElem.innerText = newItemVal;
+            ulElem.appendChild(liElem);
+        }
+
+
+
     </script>
 
     
